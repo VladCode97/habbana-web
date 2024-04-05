@@ -1,0 +1,6 @@
+@media screen and (min-width: 1024px) {
+    .custom-large-img {
+      width: 550px !important;
+      max-width: 1200px !important;
+    }
+}

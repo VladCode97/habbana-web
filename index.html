@@ -3,51 +3,50 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
 
-  <div class="bg-black w-full h-screen p-12">
-    <div class="flex justify-between items-center mt-9">
+  <div class="bg-black w-full h-screen p-4 md:p-12">
+    <div class="flex flex-col md:flex-row justify-between items-center mt-9 mb-5">
       <div>
         <img alt="logo" src="./public/images/WhatsApp Image 2024-03-18 at 08.55 2.svg">
       </div>
-      <div class="flex gap-20 text-[#A66E4C]">
-        <a href="/#" class="text-xl hover:text-opacity-80 transition duration-300">
+      <div class="flex flex-col md:flex-row gap-8 md:gap-20 text-[#A66E4C] mt-4 md:mt-0">
+        <a href="/#" class="text-lg md:text-xl hover:text-opacity-80 transition duration-300">
           Inicio
         </a>
-        <a href="/#" class="text-xl hover:text-opacity-80 transition duration-300">
+        <a href="/#" class="text-lg md:text-xl hover:text-opacity-80 transition duration-300">
           Servicios
         </a>
-        <a href="/#" class="text-xl hover:text-opacity-80 transition duration-300">
+        <a href="/#" class="text-lg md:text-xl hover:text-opacity-80 transition duration-300">
           Proyectos
         </a>
-        <a href="/#" class="text-xl hover:text-opacity-80 transition duration-300">
+        <a href="/#" class="text-lg md:text-xl hover:text-opacity-80 transition duration-300">
           Contáctanos
         </a>
       </div>
     </div>
-    <!--  -->
-    <div class="flex justify-between items-center p-1 mt-32">
-      <!-- Content -->
-      <div class="text-white text-[80px] mt-32">
-        <h1>Le damos forma a</h1>
-        <h1>tus sueños</h1>
-        <p class="text-[18px] w-10/12">
+  
+    <div class="flex flex-col-reverse md:flex-row justify-between items-center mt-12 md:mt-52">
+      <div class="text-white mt-12 md:mt-0 mb-52">
+        <h1 class="text-4xl md:text-8xl leading-tight">Le damos forma a tus sueños</h1>
+        <p class="text-base md:text-xl mt-8 md:mt-12 w-full md:w-10/12">
           Investigamos, creamos y construimos lugares de
           trabajo con la fusión de diseño, tecnología e innovación.
-          Deje que nuestro equipo de arquitecturade interiores
+          Deje que nuestro equipo de arquitectura de interiores
           le ayude a crear una empresa mejor.
         </p>
       </div>
-      <!-- Images content -->
-      <div class="flex gap-20 text-[#A66E4C]">
-        <img alt="" width="1500" src="./public/images/Group 1.png">
+      <div class="w-full md:w-auto mb-52">
+        <img class="w-full h-auto custom-large-img" src="./public/images/Group 1.png" alt="Imagen decorativa" />
       </div>
     </div>
   </div>
+  
   <div class="w-full h-screen p-12">
     <!-- Mission -->
     <div class="flex items-center justify-between mt-20">
@@ -124,6 +123,68 @@
       </div>
       <div class="bg-black rounded-full w-32 h-32 ml-8"></div>
     </div>
+    <div class="grid grid-cols-3 gap-2 w-10/12 ml-14">
+      <!-- Empty div to take up the first two column spaces -->
+      <div></div>
+      <!-- Member 1 -->
+      <div class="justify-self-end">
+        <img src="/public/images/image 5.png" alt="Ricardo Villota" class="w-92 h-92 object-cover"/>
+        <h3 class="text-xl font-semibold mt-4">Ricardo Villota</h3>
+        <p class="text-gray-600">Arquitecto</p>
+      </div>
+      
+      <!-- Member 2 -->
+      <div class="justify-self-end">
+        <img src="/public/images/image 5.png" alt="Sebastian" class="w-92 h-92 object-cover"/>
+        <h3 class="text-xl font-semibold mt-4">Sebastian</h3>
+        <p class="text-gray-600">Arquitecto</p>
+      </div>
+    </div>
   </div>
+  <!-- Footer -->
+
+  <footer class="bg-black text-white p-10 mt-[100%]" >
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-6 md:mb-0">
+        <p>© Copywriting | All Rights Reserved</p>
+      </div>
+      <div class="grid grid-cols-2 gap-8 mb-6 md:mb-0">
+        <div>
+          <h6 class="font-bold mb-3">Servicios</h6>
+          <ul class="font-light">
+            <li>Diseño arquitectonico</li>
+            <li>Diseño interior</li>
+            <li>Diseño de mobiliario</li>
+            <li>Identidad de marca</li>
+            <li>Branding</li>
+            <li>Transmite para licencia</li>
+            <li>Asesoria de diseño</li>
+            <li>Renderización</li>
+          </ul>
+        </div>  
+        <div>
+          <h6 class="font-bold mb-3">Compañía</h6>
+          <ul class="font-light">
+            <li>Acerca de nosotros</li>
+            <li>Clientes</li>
+            <li>Contáctenos</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="flex items-center space-x-4">
+        <a href="your-instagram-url" aria-label="Instagram">
+          <img src="/public/social-media/instagram.png" alt="Instagram" />
+        </a>
+        <a href="your-linkedin-url" aria-label="LinkedIn">
+          <img src="/public/social-media/linkedin-logo.png" alt="LinkedIn" />
+        </a>
+        <a href="your-other-url" aria-label="Other">
+          <img src="/public/social-media/whatsapp.png" alt="Other" />
+        </a>
+      </div>
+    </div>
+  </footer>
+  
 </body>
 </html>
