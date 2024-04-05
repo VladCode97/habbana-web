@@ -1,190 +1,44 @@
 <!doctype html>
-<html>
-
+<html lang="en">
 <head>
+  <title>habbano</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./style.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body>
 
-  <div class="bg-black w-full h-screen p-4 md:p-12">
-    <div class="flex flex-col md:flex-row justify-between items-center mt-9 mb-5">
-      <div>
-        <img alt="logo" src="./public/images/WhatsApp Image 2024-03-18 at 08.55 2.svg">
-      </div>
-      <div class="flex flex-col md:flex-row gap-8 md:gap-20 text-[#A66E4C] mt-4 md:mt-0">
-        <a href="/#" class="text-lg md:text-xl hover:text-opacity-80 transition duration-300">
-          Inicio
-        </a>
-        <a href="/#" class="text-lg md:text-xl hover:text-opacity-80 transition duration-300">
-          Servicios
-        </a>
-        <a href="/#" class="text-lg md:text-xl hover:text-opacity-80 transition duration-300">
-          Proyectos
-        </a>
-        <a href="/#" class="text-lg md:text-xl hover:text-opacity-80 transition duration-300">
-          Contáctanos
-        </a>
-      </div>
-    </div>
-  
-    <div class="flex flex-col-reverse md:flex-row justify-between items-center mt-12 md:mt-52">
-      <div class="text-white mt-12 md:mt-0 mb-52">
-        <h1 class="text-4xl md:text-8xl leading-tight">Le damos forma a tus sueños</h1>
-        <p class="text-base md:text-xl mt-8 md:mt-12 w-full md:w-10/12">
-          Investigamos, creamos y construimos lugares de
-          trabajo con la fusión de diseño, tecnología e innovación.
-          Deje que nuestro equipo de arquitectura de interiores
-          le ayude a crear una empresa mejor.
-        </p>
-      </div>
-      <div class="w-full md:w-auto mb-52">
-        <img class="w-full h-auto custom-large-img" src="./public/images/Group 1.png" alt="Imagen decorativa" />
-      </div>
+<div class="bg-black text-white min-h-screen p-4 md:p-12">
+  <div class="flex flex-col md:flex-row justify-between items-center">
+    <img src="./public/images/logo.svg" alt="Logo" class="mb-6 md:mb-0">
+    
+    <div class="flex flex-wrap gap-14 justify-center md:justify-end text-[#A66E4C]">
+      <a href="/#" class="text-lg md:text-xl hover:text-opacity-80 transition duration-300">
+        Inicio
+      </a>
+      <a href="/#" class="text-lg md:text-xl hover:text-opacity-80 transition duration-300">
+        Servicios
+      </a>
+      <a href="/#" class="text-lg md:text-xl hover:text-opacity-80 transition duration-300">
+        Proyectos
+      </a>
+      <a href="/#" class="text-lg md:text-xl hover:text-opacity-80 transition duration-300">
+        Contáctanos
+      </a>
     </div>
   </div>
-  
-  <div class="w-full h-screen p-12">
-    <!-- Mission -->
-    <div class="flex items-center justify-between mt-20">
-      <div class="bg-black rounded-full w-32 h-32"></div>
-      <div class="flex-1 flex flex-col items-start justify-center mt-16">
-        <h2 class="text-3xl font-bold ml-12">Nuestra misión</h2>
-        <div class="border-t border-black w-[116%] mx-0 mt-8 ml-12"></div>
-        <p class="mt-12 w-[60%] ml-12 mt-20">
-          Transformar espacios a través de diseños innovadores y funcionales que reflejen la identidad y necesidades de
-          nuestros clientes, creando ambientes inspiradores y confortables.
-        </p>
-      </div>
-      <div class="w-40 h-52 invisible"></div>
-    </div>
-    <!-- Vision -->
-    <div class="flex items-center justify-between mt-20">
-      <div class="w-40 h-52 invisible"></div>
-      <div class="flex-1 flex flex-col items-end justify-center mt-16">
-        <h2 class="text-3xl font-bold">Nuestra visión</h2>
-        <div class="border-t border-black w-[130%] mx-0 mt-8 ml-12"></div>
-        <p class="mt-12 w-[65%] ml-12 mt-20">
-          Ser reconocidos como líderes en el diseño arquitectónico y de interiores, siendo referentes en la industria
-          por nuestra creatividad, calidad y compromiso con la excelencia.
-        </p>
-      </div>
-      <div class="bg-black rounded-full w-32 h-32 ml-8"></div>
-    </div>
-    <!-- Goals -->
-    <div class="flex items-center justify-between mt-20">
-      <div class="bg-black rounded-full w-32 h-32"></div>
-      <div class="flex-1 flex flex-col items-start justify-center mt-2">
-        <h2 class="text-3xl font-bold ml-12">Nuestros objetivos</h2>
-        <div class="border-t border-black w-[116%] mx-0 mt-8 ml-12"></div>
-        <div class="p-8 ml-4">
-        </div>
-      </div>
-      <div class="w-40 h-52 invisible"></div>
-    </div>
-    <div class="w-[80%] ml-48">
-      <div class="grid grid-cols-3 gap-8">
-        <div class="flex flex-col">
-          <span class="text-green-700 text-xl font-bold">1 +</span>
-          <p class="text-gray-800">Proporcionar soluciones de diseño personalizadas que superen las expectativas de
-            nuestros clientes.</p>
-        </div>
-        <div class="flex flex-col">
-          <span class="text-green-700 text-xl font-bold">2 +</span>
-          <p class="ext-gray-800">Mantenernos a la vanguardia de las tendencias y tecnologías en arquitectura e
-            interiorismo.</p>
-        </div>
-        <div class="flex flex-col">
-          <span class="text-green-700 text-xl font-bold">3 +</span>
-          <p class="text-gray-800">Cultivar relaciones sólidas y duraderas con clientes, proveedores y
-            colaboradores.</p>
-        </div>
-        <div class="flex flex-col">
-          <span class="text-green-700 text-xl font-bold">4 +</span>
-          <p class="text-gray-800">Fomentar un ambiente de trabajo colaborativo y creativo que impulse la innovación
-            y el crecimiento profesional.</p>
-        </div>
-        <div class="flex flex-col">
-          <span class="text-green-700 text-xl font-bold">5 +</span>
-          <p class="text-gray-800">Contribuir al desarrollo sostenible a través de prácticas responsables en el
-            diseño y la construcción.</p>
-        </div>
-      </div>
-    </div>
-    <!-- Team -->
-    <div class="flex items-center justify-between mt-20">
-      <div class="w-40 h-52 invisible"></div>
-      <div class="flex-1 flex flex-col items-end justify-center">
-        <h2 class="text-3xl font-bold">Nuestro equipo</h2>
-        <div class="border-t border-black w-[130%] mx-0 mt-8 ml-12"></div>
-      </div>
-      <div class="bg-black rounded-full w-32 h-32 ml-8"></div>
-    </div>
-    <div class="grid grid-cols-3 gap-2 w-10/12 ml-14">
-      <!-- Empty div to take up the first two column spaces -->
-      <div></div>
-      <!-- Member 1 -->
-      <div class="justify-self-end">
-        <img src="./public/images/image 5.png" alt="Ricardo Villota" class="w-92 h-92 object-cover"/>
-        <h3 class="text-xl font-semibold mt-4">Ricardo Villota</h3>
-        <p class="text-gray-600">Arquitecto</p>
-      </div>
-      
-      <!-- Member 2 -->
-      <div class="justify-self-end">
-        <img src="./public/images/image 5.png" alt="Sebastian" class="w-92 h-92 object-cover"/>
-        <h3 class="text-xl font-semibold mt-4">Sebastian</h3>
-        <p class="text-gray-600">Arquitecto</p>
-      </div>
-    </div>
-  </div>
-  <!-- Footer -->
 
-  <footer class="bg-black text-white p-10 mt-[100%]" >
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-      <div class="mb-6 md:mb-0">
-        <p>© Copywriting | All Rights Reserved</p>
-      </div>
-      <div class="grid grid-cols-2 gap-8 mb-6 md:mb-0">
-        <div>
-          <h6 class="font-bold mb-3">Servicios</h6>
-          <ul class="font-light">
-            <li>Diseño arquitectonico</li>
-            <li>Diseño interior</li>
-            <li>Diseño de mobiliario</li>
-            <li>Identidad de marca</li>
-            <li>Branding</li>
-            <li>Transmite para licencia</li>
-            <li>Asesoria de diseño</li>
-            <li>Renderización</li>
-          </ul>
-        </div>  
-        <div>
-          <h6 class="font-bold mb-3">Compañía</h6>
-          <ul class="font-light">
-            <li>Acerca de nosotros</li>
-            <li>Clientes</li>
-            <li>Contáctenos</li>
-          </ul>
-        </div>
-      </div>
-  
-      <div class="flex items-center space-x-4">
-        <a href="your-instagram-url" aria-label="Instagram">
-          <img src="./public/social-media/instagram.png" alt="Instagram" />
-        </a>
-        <a href="your-linkedin-url" aria-label="LinkedIn">
-          <img src="./public/social-media/linkedin-logo.png" alt="LinkedIn" />
-        </a>
-        <a href="your-other-url" aria-label="Other">
-          <img src="./public/social-media/whatsapp.png" alt="Other" />
-        </a>
-      </div>
+  <div class="flex flex-col md:flex-row items-center mt-12 md:mt-52">
+    <div class="flex-1 mb-12 md:mb-0">
+      <h1 class="text-3xl md:text-7xl font-bold mt-36">Le damos forma a tus sueños</h1>
+      <p class="mt-4 text-sm md:text-lg mt-8">
+        Investigamos, creamos y construimos lugares de trabajo con la fusión de diseño, tecnología e innovación.
+        Deje que nuestro equipo de arquitectura de interiores le ayude a crear una empresa mejor.
+      </p>
     </div>
-  </footer>
-  
+    <img src="./public/images/decoration.png" alt="" class="max-w-full h-auto md:max-w-2xl" />
+  </div>
+</div>
 </body>
 </html>
