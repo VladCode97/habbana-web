@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>habbano</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .custom-border {
+        border-color: #59754d;
+      }
+      .custom-text {
+        color: #59754d;
+      }
+      .section-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .section-title::before {
+        content: "";
+        flex-grow: 1;
+        height: 3px;
+        background-color: #59754d;
+        margin-right: 0.5rem;
+        max-width: 50px;
+      }
+      .section-title span {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #59754d;
+      }
+      .highlight {
+        color: #a66e4c;
+      }
+      .modal-overlay {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      .modal-content {
+        background-color: #f8f8f8;
+        max-width: 90%;
+        max-height: 90%;
+        overflow: auto;
+      }
+      @media (max-width: 768px) {
+        .modal-content {
+          flex-direction: column;
+          padding: 20px;
+        }
+        .modal-content img {
+          height: auto;
+        }
+        .modal-left-content {
+          padding: 20px;
+        }
+        .modal-left-content h2 {
+          margin-top: 0;
+        }
+        .modal-left-content p {
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Home -->
+    <header class="bg-black text-white py-10">
+      <div class="container mx-auto flex justify-between items-center">
+        <img src="./public/images/logo.svg" alt="Logo" class="mb-6 md:mb-0" />
+        <nav>
+          <ul class="flex space-x-4">
+            <li><a href="#" class="hover:underline">Inicio</a></li>
+            <li><a href="#" class="hover:underline">Servicios</a></li>
+            <li><a href="#" class="hover:underline">Proyectos</a></li>
+            <li><a href="#" class="hover:underline">Contactanos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="container mx-auto py-12">
+      <h2 class="text-3xl font-bold mb-8">
+        <span class="highlight">Servicios</span> que hacemos
+      </h2>
+
+      <section class="mb-12">
+        <div class="section-title">
+          <span>Diseño</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
+          <div
+            class="border p-4 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+            onclick="openModal('modal1')"
+          >
+            <h4 class="text-base font-bold custom-text text-center">1/5</h4>
+            <p class="text-sm custom-text text-center">
+              Diseño<br />arquitectonico
+            </p>
+          </div>
+          <div
+            class="border p-4 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+            onclick="openModal('modal2')"
+          >
+            <h4 class="text-base font-bold custom-text text-center">2/5</h4>
+            <p class="text-sm custom-text text-center">Diseño<br />interior</p>
+          </div>
+          <div
+            class="border p-4 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+            onclick="openModal('modal3')"
+          >
+            <h4 class="text-base font-bold custom-text text-center">3/5</h4>
+            <p class="text-sm custom-text text-center">
+              Diseño de<br />mobiliario
+            </p>
+          </div>
+          <div
+            class="border p-4 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+            onclick="openModal('modal4')"
+          >
+            <h4 class="text-base font-bold custom-text text-center">4/5</h4>
+            <p class="text-sm custom-text text-center">branding</p>
+          </div>
+          <div
+            class="border p-4 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+            onclick="openModal('modal5')"
+          >
+            <h4 class="text-base font-bold custom-text text-center">5/5</h4>
+            <p class="text-sm custom-text text-center">renderización</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <div class="section-title">
+          <span>Investigación</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
+          <div
+            class="border p-4 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+            onclick="openModal('modal6')"
+          >
+            <h4 class="text-base font-bold custom-text text-center">1/2</h4>
+            <p class="text-sm custom-text text-center">
+              Identidad de<br />marca
+            </p>
+          </div>
+          <div
+            class="border p-4 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+            onclick="openModal('modal7')"
+          >
+            <h4 class="text-base font-bold custom-text text-center">2/2</h4>
+            <p class="text-sm custom-text text-center">
+              Asesoría de<br />diseño
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <span>Trámites</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
+          <div
+            class="border p-4 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+            onclick="openModal('modal8')"
+          >
+            <h4 class="text-base font-bold custom-text text-center">1/1</h4>
+            <p class="text-sm custom-text text-center">
+              trámites para<br />licencia
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white p-4 md:p-10">
+      <div
+        class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8"
+      >
+        <div class="mb-8 md:mb-0">
+          <p>© Copywriting | All Rights Reserved</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h6 class="font-bold mb-3">Servicios</h6>
+            <ul class="font-light">
+              <li>Diseño arquitectonico</li>
+              <li>Diseño interior</li>
+              <li>Diseño de mobiliario</li>
+              <li>Identidad de marca</li>
+              <li>Branding</li>
+              <li>Trámites para licencia</li>
+              <li>Asesoría de diseño</li>
+              <li>Renderización</li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="font-bold mb-3">Compañía</h6>
+            <ul class="font-light">
+              <li>Acerca de nosotros</li>
+              <li>Clientes</li>
+              <li>Contáctenos</li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex justify-center gap-8 md:justify-end md:col-start-3">
+          <a href="your-instagram-url" aria-label="Instagram">
+            <img src="./public/social-media/instagram.png" alt="Instagram" />
+          </a>
+          <a href="your-linkedin-url" aria-label="LinkedIn">
+            <img src="./public/social-media/linkedin-logo.png" alt="LinkedIn" />
+          </a>
+          <a href="your-other-url" aria-label="Other">
+            <img src="./public/social-media/whatsapp.png" alt="Other" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modals -->
+
+    <div
+      id="modal1"
+      class="hidden fixed inset-0 flex items-center justify-center z-50"
+    >
+      <div
+        class="modal-overlay absolute inset-0"
+        onclick="closeModal('modal1')"
+      ></div>
+      <div
+        class="modal-content relative bg-white rounded-lg shadow-lg overflow-hidden flex"
+      >
+        <!-- Left Content -->
+        <div class="w-1/3 p-8">
+          <div class="mb-4">
+            <h2 class="text-2xl font-bold mb-4 text-center mt-36">
+              Diseño arquitectonico
+            </h2>
+          </div>
+          <div class="mb-4">
+            <p class="text-gray-700 mt-20 text-center">
+              Creamos propuestas y generamos ideas para realizar el proyecto
+              arquitectonico de tus sueños, para que veas reflejado el espacio
+              ideal para ti, desde la idealización y concepción hasta la
+              materialización.
+            </p>
+          </div>
+        </div>
+        <div class="w-2/3 relative">
+          <img
+            src="public/images/services/6e5c9e138501903.Y3JvcCw4MDgsNjMyLDAsMA.jpg"
+            alt="Art Image"
+            class="w-full h-full object-cover"
+          />
+          <button
+            class="absolute top-4 right-4 text-white text-2xl"
+            onclick="closeModal('modal1')"
+          >
+            &times;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal2"
+      class="hidden fixed inset-0 flex items-center justify-center z-50"
+    >
+      <div
+        class="modal-overlay absolute inset-0"
+        onclick="closeModal('modal2')"
+      ></div>
+      <div
+        class="modal-content relative bg-white rounded-lg shadow-lg overflow-hidden flex"
+      >
+        <!-- Left Content -->
+        <div class="w-1/3 p-8">
+          <div class="mb-4">
+            <h2 class="text-2xl font-bold mb-4 text-center mt-36">
+              Diseño interior
+            </h2>
+          </div>
+          <div class="mb-4">
+            <p class="text-gray-700 mt-20 text-center">
+              Cada espacio tiene su personalidad, y por eso es único para cada
+              uno de nuestros usuarios. Si deseas reformar el espacio que
+              habitas o darle un toque único a tu vivienda nueva, no dudes en
+              contactarnos para que así creemos juntos tu lugar ideal.
+            </p>
+          </div>
+        </div>
+        <div class="w-2/3 relative">
+          <img
+            src="public/images/services/6fcad6197383229.Y3JvcCwyNzYxLDIxNjAsNjIyLDA.png"
+            alt="Art Image"
+            class="w-full h-full object-cover"
+          />
+          <button
+            class="absolute top-4 right-4 text-white text-2xl"
+            onclick="closeModal('modal2')"
+          >
+            &times;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal3"
+      class="hidden fixed inset-0 flex items-center justify-center z-50"
+    >
+      <div
+        class="modal-overlay absolute inset-0"
+        onclick="closeModal('modal3')"
+      ></div>
+      <div
+        class="modal-content relative bg-white rounded-lg shadow-lg overflow-hidden flex"
+      >
+        <!-- Left Content -->
+        <div class="w-1/3 p-8">
+          <div class="mb-4">
+            <h2 class="text-2xl font-bold mb-4 text-center mt-36">
+              Diseño de mobiliario
+            </h2>
+          </div>
+          <div class="mb-4">
+            <p class="text-gray-700 mt-20 text-center">
+              El diseño de mobiliario combina la funcionalidad con la estética,
+              creando piezas que no solo son prácticas, sino también visualmente
+              atractivas. Desde muebles para el hogar hasta espacios
+              comerciales, en la etapa de diseño de mobiliario abarcamos una
+              amplia gama de estilos, materiales y técnicas, con el objetivo de
+              mejorar tu experiencia
+            </p>
+          </div>
+        </div>
+        <div class="w-2/3 relative">
+          <img
+            src="public/images/services/8ed823197254527.Y3JvcCwxNDc0LDExNTIsMCw0NDg.jpg"
+            alt="Art Image"
+            class="w-full h-full object-cover"
+          />
+          <button
+            class="absolute top-4 right-4 text-white text-2xl"
+            onclick="closeModal('modal3')"
+          >
+            &times;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal4"
+      class="hidden fixed inset-0 flex items-center justify-center z-50"
+    >
+      <div
+        class="modal-overlay absolute inset-0"
+        onclick="closeModal('modal4')"
+      ></div>
+      <div
+        class="modal-content relative bg-white rounded-lg shadow-lg overflow-hidden flex"
+      >
+        <!-- Left Content -->
+        <div class="w-1/3 p-8">
+          <div class="mb-4">
+            <h2 class="text-2xl font-bold mb-4 text-center mt-36">Branding</h2>
+          </div>
+          <div class="mb-4">
+            <p class="text-gray-700 mt-20 text-center">
+              En el proceso de Branding de tu marca o empresa, no solo creamos
+              tu logo y escogemos los colores que te representan, creamos
+              sensaciones y conexiones para que tu marca resalte y quede
+              impregnada en la memoria de tus usuarios
+            </p>
+          </div>
+        </div>
+        <div class="w-2/3 relative">
+          <img
+            src="public/images/services/9d5aa5186712351.657a1583c4cb9.png"
+            alt="Art Image"
+            class="w-full h-full object-cover"
+          />
+          <button
+            class="absolute top-4 right-4 text-white text-2xl"
+            onclick="closeModal('modal4')"
+          >
+            &times;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal5"
+      class="hidden fixed inset-0 flex items-center justify-center z-50"
+    >
+      <div
+        class="modal-overlay absolute inset-0"
+        onclick="closeModal('modal5')"
+      ></div>
+      <div
+        class="modal-content relative bg-white rounded-lg shadow-lg overflow-hidden flex"
+      >
+        <!-- Left Content -->
+        <div class="w-1/3 p-8">
+          <div class="mb-4">
+            <h2 class="text-2xl font-bold mb-4 text-center mt-36">
+              Renderización
+            </h2>
+          </div>
+          <div class="mb-4">
+            <p class="text-gray-700 mt-20 text-center">
+              Si tienes un modelo 3d de un proyecto y deseas ver una imagen
+              final de tu espacio con texturas, luces y sensaciones, contactanos
+              y pregunta por nuestros paquetes de renderización.
+            </p>
+          </div>
+        </div>
+        <div class="w-2/3 relative">
+          <img
+            src="public/images/services/8c603e198125599.Y3JvcCwzMDAwLDIzNDYsMCw1OQ.png"
+            alt="Art Image"
+            class="w-full h-full object-cover"
+          />
+          <button
+            class="absolute top-4 right-4 text-white text-2xl"
+            onclick="closeModal('modal5')"
+          >
+            &times;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal6"
+      class="hidden fixed inset-0 flex items-center justify-center z-50"
+    >
+      <div
+        class="modal-overlay absolute inset-0"
+        onclick="closeModal('modal6')"
+      ></div>
+      <div
+        class="modal-content relative bg-white rounded-lg shadow-lg overflow-hidden flex"
+      >
+        <!-- Left Content -->
+        <div class="w-1/3 p-8">
+          <div class="mb-4">
+            <h2 class="text-2xl font-bold mb-4 text-center mt-36">
+              Identidad de marca
+            </h2>
+          </div>
+          <div class="mb-4">
+            <p class="text-gray-700 mt-20 text-center">
+              Te acompañamos en la búsqueda de la representación visual y
+              conceptual de tu marca o empresa, encontrando la personalidad y
+              los valores de esta. Nuestro servicio incluye creación de
+              logotipo, colorimetría, estilo de marca, estudio de publico
+              objetivo y estudio de entorno y contorno.
+            </p>
+          </div>
+        </div>
+        <div class="w-2/3 relative">
+          <img
+            src="public/images/services/83c439186712351.657a157d62e4f.png"
+            alt="Art Image"
+            class="w-full h-full object-cover"
+          />
+          <button
+            class="absolute top-4 right-4 text-white text-2xl"
+            onclick="closeModal('modal6')"
+          >
+            &times;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal7"
+      class="hidden fixed inset-0 flex items-center justify-center z-50"
+    >
+      <div
+        class="modal-overlay absolute inset-0"
+        onclick="closeModal('modal7')"
+      ></div>
+      <div
+        class="modal-content relative bg-white rounded-lg shadow-lg overflow-hidden flex"
+      >
+        <!-- Left Content -->
+        <div class="w-1/3 p-8">
+          <div class="mb-4">
+            <h2 class="text-2xl font-bold mb-4 text-center mt-36">
+              Asesoría de diseño
+            </h2>
+          </div>
+          <div class="mb-4">
+            <p class="text-gray-700 mt-20 text-center">
+              Si deseas dar el primer paso para construir tu proyecto
+              arquitectonico, pero no estás seguro de cómo iniciar, no tienes
+              los medios para concebirlo o simplemente deseas unas primeras
+              ideas, contáctanos y te asesoramos
+            </p>
+          </div>
+        </div>
+        <div class="w-2/3 relative">
+          <img
+            src="public/images/services/5fb8b2186712351.657a157d5e323.png"
+            alt="Art Image"
+            class="w-full h-full object-cover"
+          />
+          <button
+            class="absolute top-4 right-4 text-white text-2xl"
+            onclick="closeModal('modal7')"
+          >
+            &times;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal8"
+      class="hidden fixed inset-0 flex items-center justify-center z-50"
+    >
+      <div
+        class="modal-overlay absolute inset-0"
+        onclick="closeModal('modal8')"
+      ></div>
+      <div
+        class="modal-content relative bg-white rounded-lg shadow-lg overflow-hidden flex"
+      >
+        <!-- Left Content -->
+        <div class="w-1/3 p-8">
+          <div class="mb-4">
+            <h2 class="text-2xl font-bold mb-4 text-center mt-36">
+              Trámites para licencia
+            </h2>
+          </div>
+          <div class="mb-4">
+            <p class="text-gray-700 mt-20 text-center">
+              Si deseas construir un proyecto nuevo o estás en proceso, te
+              asesoramos en la gestión de los trámites que tengas pendientes.
+              Corrección de planos, trámites ante curaduría, asesoramiento en
+              documentos para iniciar tu proyecto y más.
+            </p>
+          </div>
+        </div>
+        <div class="w-2/3 relative">
+          <img
+            src="public/images/services/5dfef8189254889.Y3JvcCwxMDA3LDc4OCwxOTcsMA.png"
+            alt="Art Image"
+            class="w-full h-full object-cover"
+          />
+          <button
+            class="absolute top-4 right-4 text-white text-2xl"
+            onclick="closeModal('modal8')"
+          >
+            &times;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openModal(modalId) {
+        document.getElementById(modalId).classList.remove("hidden");
+      }
+
+      function closeModal(modalId) {
+        document.getElementById(modalId).classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>
