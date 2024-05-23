@@ -1,112 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>habbano</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./style.css" />
-    
-    <style>
-        .custom-border {
-            border-color: #59754d;
-        }
-        .custom-text {
-            color: #59754d;
-        }
-        .section-title {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        .section-title::before {
-            content: "";
-            flex-grow: 1;
-            height: 3px;
-            background-color: #59754d;
-            margin-right: 0.5rem;
-            max-width: 50px;
-        }
-        .section-title span {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: #59754d;
-        }
-        .highlight {
-            color: #a66e4c;
-        }
-        .modal-overlay {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        .modal-content {
-            background-color: #f8f8f8;
-            max-width: 90%;
-            max-height: 90%;
-        }
-        @media (max-width: 768px) {
-            .modal-content {
-                flex-direction: column;
-                padding: 20px;
-            }
-            .modal-content img {
-                height: auto;
-            }
-            .modal-left-content {
-                padding: 20px;
-            }
-            .modal-left-content h2 {
-                margin-top: 0;
-            }
-            .modal-left-content p {
-                margin-top: 10px;
-            }
-            .section-title span {
-                font-size: 1rem;
-            }
-            .border {
-                padding: 2;
-                margin-bottom: 4;
-            }
-            .custom-text {
-                font-size: 0.875rem;
-            }
-        }
-        @media (prefers-color-scheme: dark) {
-        .dark\:bg-gray-800 {
-            --tw-bg-opacity: 1;
-            background-color: black !important;
-            border: none !important;
-        }
-}
-    </style>
 </head>
+
 <body class="bg-gray-100">
     <!-- Home -->
     <nav class="bg-black text-white p-10">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center">
-                <img src="./public/images/logo.svg" class="h-8" alt="Logo">
+                <img src="./public/images/logo.svg" class="h-12" alt="Logo">
             </a>
-            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false" onclick="toggleMenu()">
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false" onclick="toggleMenu()">
                 <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
                 </svg>
             </button>
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-              <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-black dark:border-gray-700">
-                <li>
-                    <a href="/habbana-web/index.html" class="block py-2 px-3 text-white rounded md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-white" aria-current="page">Inicio</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Servicios</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Proyectos</a>
-                </li>
-                <li>
-                    <a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contáctanos</a>
-                </li>
-            </ul>
+                <ul
+                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-black dark:border-gray-700">
+                    <li>
+                        <a href="/habbana-web/index.html"
+                            class="block py-2 px-3 text-white rounded md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-white"
+                            aria-current="page">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Proyectos</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contáctanos</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -117,43 +56,50 @@
         </h2>
 
         <section class="mb-12">
-          <div class="section-title">
-              <span>Diseño</span>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-              <div class="border p-4 md:p-6 rounded-lg custom-border flex flex-col items-center cursor-pointer" onclick="openModal('modal1')">
-                  <h4 class="text-sm md:text-base font-bold custom-text text-center">1/5</h4>
-                  <p class="text-xs md:text-sm custom-text text-center">Diseño<br />arquitectonico</p>
-              </div>
-              <div class="border p-4 md:p-6 rounded-lg custom-border flex flex-col items-center cursor-pointer" onclick="openModal('modal2')">
-                  <h4 class="text-sm md:text-base font-bold custom-text text-center">2/5</h4>
-                  <p class="text-xs md:text-sm custom-text text-center">Diseño<br />interior</p>
-              </div>
-              <div class="border p-4 md:p-6 rounded-lg custom-border flex flex-col items-center cursor-pointer" onclick="openModal('modal3')">
-                  <h4 class="text-sm md:text-base font-bold custom-text text-center">3/5</h4>
-                  <p class="text-xs md:text-sm custom-text text-center">Diseño de<br />mobiliario</p>
-              </div>
-              <div class="border p-4 md:p-6 rounded-lg custom-border flex flex-col items-center cursor-pointer" onclick="openModal('modal4')">
-                  <h4 class="text-sm md:text-base font-bold custom-text text-center">4/5</h4>
-                  <p class="text-xs md:text-sm custom-text text-center">branding</p>
-              </div>
-              <div class="border p-4 md:p-6 rounded-lg custom-border flex flex-col items-center cursor-pointer" onclick="openModal('modal5')">
-                  <h4 class="text-sm md:text-base font-bold custom-text text-center">5/5</h4>
-                  <p class="text-xs md:text-sm custom-text text-center">renderización</p>
-              </div>
-          </div>
-      </section>
+            <div class="section-title">
+                <span>Diseño</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+                <div class="border p-4 md:p-6 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+                    onclick="openModal('modal1')">
+                    <h4 class="text-sm md:text-base font-bold custom-text text-center">1/5</h4>
+                    <p class="text-xs md:text-sm custom-text text-center">Diseño<br />arquitectonico</p>
+                </div>
+                <div class="border p-4 md:p-6 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+                    onclick="openModal('modal2')">
+                    <h4 class="text-sm md:text-base font-bold custom-text text-center">2/5</h4>
+                    <p class="text-xs md:text-sm custom-text text-center">Diseño<br />interior</p>
+                </div>
+                <div class="border p-4 md:p-6 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+                    onclick="openModal('modal3')">
+                    <h4 class="text-sm md:text-base font-bold custom-text text-center">3/5</h4>
+                    <p class="text-xs md:text-sm custom-text text-center">Diseño de<br />mobiliario</p>
+                </div>
+                <div class="border p-4 md:p-6 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+                    onclick="openModal('modal4')">
+                    <h4 class="text-sm md:text-base font-bold custom-text text-center">4/5</h4>
+                    <p class="text-xs md:text-sm custom-text text-center">branding</p>
+                </div>
+                <div class="border p-4 md:p-6 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+                    onclick="openModal('modal5')">
+                    <h4 class="text-sm md:text-base font-bold custom-text text-center">5/5</h4>
+                    <p class="text-xs md:text-sm custom-text text-center">renderización</p>
+                </div>
+            </div>
+        </section>
 
         <section class="mb-12">
             <div class="section-title">
                 <span>Investigación</span>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-                <div class="border p-4 rounded-lg custom-border flex flex-col items-center cursor-pointer" onclick="openModal('modal6')">
+                <div class="border p-4 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+                    onclick="openModal('modal6')">
                     <h4 class="text-base font-bold custom-text text-center">1/2</h4>
                     <p class="text-sm custom-text text-center">Identidad de<br />marca</p>
                 </div>
-                <div class="border p-4 rounded-lg custom-border flex flex-col items-center cursor-pointer" onclick="openModal('modal7')">
+                <div class="border p-4 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+                    onclick="openModal('modal7')">
                     <h4 class="text-base font-bold custom-text text-center">2/2</h4>
                     <p class="text-sm custom-text text-center">Asesoría de<br />diseño</p>
                 </div>
@@ -165,7 +111,8 @@
                 <span>Trámites</span>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-                <div class="border p-4 rounded-lg custom-border flex flex-col items-center cursor-pointer" onclick="openModal('modal8')">
+                <div class="border p-4 rounded-lg custom-border flex flex-col items-center cursor-pointer"
+                    onclick="openModal('modal8')">
                     <h4 class="text-base font-bold custom-text text-center">1/1</h4>
                     <p class="text-sm custom-text text-center">trámites para<br />licencia</p>
                 </div>
@@ -226,12 +173,16 @@
                     <h2 class="text-2xl font-bold mb-4 text-center mt-36">Diseño arquitectonico</h2>
                 </div>
                 <div class="mb-4">
-                    <p class="text-gray-700 mt-20 text-center">Creamos propuestas y generamos ideas para realizar el proyecto arquitectonico de tus sueños, para que veas reflejado el espacio ideal para ti, desde la idealización y concepción hasta la materialización.</p>
+                    <p class="text-gray-700 mt-20 text-center">Creamos propuestas y generamos ideas para realizar el
+                        proyecto arquitectonico de tus sueños, para que veas reflejado el espacio ideal para ti, desde
+                        la idealización y concepción hasta la materialización.</p>
                 </div>
             </div>
             <div class="w-full md:w-2/3 relative">
-                <img src="public/images/services/6e5c9e138501903.Y3JvcCw4MDgsNjMyLDAsMA.jpg" alt="Art Image" class="w-full h-full object-cover">
-                <button class="absolute top-4 right-4 text-white text-2xl" onclick="closeModal('modal1')">&times;</button>
+                <img src="public/images/services/6e5c9e138501903.Y3JvcCw4MDgsNjMyLDAsMA.jpg" alt="Art Image"
+                    class="w-full h-full object-cover">
+                <button class="absolute top-4 right-4 text-white text-2xl"
+                    onclick="closeModal('modal1')">&times;</button>
             </div>
         </div>
     </div>
@@ -245,12 +196,17 @@
                     <h2 class="text-2xl font-bold mb-4 text-center mt-36">Diseño interior</h2>
                 </div>
                 <div class="mb-4">
-                    <p class="text-gray-700 mt-20 text-center">Cada espacio tiene su personalidad, y por eso es único para cada uno de nuestros usuarios. Si deseas reformar el espacio que habitas o darle un toque único a tu vivienda nueva, no dudes en contactarnos para que así creemos juntos tu lugar ideal.</p>
+                    <p class="text-gray-700 mt-20 text-center">Cada espacio tiene su personalidad, y por eso es único
+                        para cada uno de nuestros usuarios. Si deseas reformar el espacio que habitas o darle un toque
+                        único a tu vivienda nueva, no dudes en contactarnos para que así creemos juntos tu lugar ideal.
+                    </p>
                 </div>
             </div>
             <div class="w-full md:w-2/3 relative">
-                <img src="public/images/services/6fcad6197383229.Y3JvcCwyNzYxLDIxNjAsNjIyLDA.png" alt="Art Image" class="w-full h-full object-cover">
-                <button class="absolute top-4 right-4 text-white text-2xl" onclick="closeModal('modal2')">&times;</button>
+                <img src="public/images/services/6fcad6197383229.Y3JvcCwyNzYxLDIxNjAsNjIyLDA.png" alt="Art Image"
+                    class="w-full h-full object-cover">
+                <button class="absolute top-4 right-4 text-white text-2xl"
+                    onclick="closeModal('modal2')">&times;</button>
             </div>
         </div>
     </div>
@@ -264,12 +220,18 @@
                     <h2 class="text-2xl font-bold mb-4 text-center mt-36">Diseño de mobiliario</h2>
                 </div>
                 <div class="mb-4">
-                    <p class="text-gray-700 mt-20 text-center">El diseño de mobiliario combina la funcionalidad con la estética, creando piezas que no solo son prácticas, sino también visualmente atractivas. Desde muebles para el hogar hasta espacios comerciales, en la etapa de diseño de mobiliario abarcamos una amplia gama de estilos, materiales y técnicas, con el objetivo de mejorar tu experiencia.</p>
+                    <p class="text-gray-700 mt-20 text-center">El diseño de mobiliario combina la funcionalidad con la
+                        estética, creando piezas que no solo son prácticas, sino también visualmente atractivas. Desde
+                        muebles para el hogar hasta espacios comerciales, en la etapa de diseño de mobiliario abarcamos
+                        una amplia gama de estilos, materiales y técnicas, con el objetivo de mejorar tu experiencia.
+                    </p>
                 </div>
             </div>
             <div class="w-full md:w-2/3 relative">
-                <img src="public/images/services/8ed823197254527.Y3JvcCwxNDc0LDExNTIsMCw0NDg.jpg" alt="Art Image" class="w-full h-full object-cover">
-                <button class="absolute top-4 right-4 text-white text-2xl" onclick="closeModal('modal3')">&times;</button>
+                <img src="public/images/services/8ed823197254527.Y3JvcCwxNDc0LDExNTIsMCw0NDg.jpg" alt="Art Image"
+                    class="w-full h-full object-cover">
+                <button class="absolute top-4 right-4 text-white text-2xl"
+                    onclick="closeModal('modal3')">&times;</button>
             </div>
         </div>
     </div>
@@ -283,12 +245,16 @@
                     <h2 class="text-2xl font-bold mb-4 text-center mt-36">Branding</h2>
                 </div>
                 <div class="mb-4">
-                    <p class="text-gray-700 mt-20 text-center">En el proceso de Branding de tu marca o empresa, no solo creamos tu logo y escogemos los colores que te representan, creamos sensaciones y conexiones para que tu marca resalte y quede impregnada en la memoria de tus usuarios.</p>
+                    <p class="text-gray-700 mt-20 text-center">En el proceso de Branding de tu marca o empresa, no solo
+                        creamos tu logo y escogemos los colores que te representan, creamos sensaciones y conexiones
+                        para que tu marca resalte y quede impregnada en la memoria de tus usuarios.</p>
                 </div>
             </div>
             <div class="w-full md:w-2/3 relative">
-                <img src="public/images/services/9d5aa5186712351.657a1583c4cb9.png" alt="Art Image" class="w-full h-full object-cover">
-                <button class="absolute top-4 right-4 text-white text-2xl" onclick="closeModal('modal4')">&times;</button>
+                <img src="public/images/services/9d5aa5186712351.657a1583c4cb9.png" alt="Art Image"
+                    class="w-full h-full object-cover">
+                <button class="absolute top-4 right-4 text-white text-2xl"
+                    onclick="closeModal('modal4')">&times;</button>
             </div>
         </div>
     </div>
@@ -302,12 +268,16 @@
                     <h2 class="text-2xl font-bold mb-4 text-center mt-36">Renderización</h2>
                 </div>
                 <div class="mb-4">
-                    <p class="text-gray-700 mt-20 text-center">Si tienes un modelo 3d de un proyecto y deseas ver una imagen final de tu espacio con texturas, luces y sensaciones, contáctanos y pregunta por nuestros paquetes de renderización.</p>
+                    <p class="text-gray-700 mt-20 text-center">Si tienes un modelo 3d de un proyecto y deseas ver una
+                        imagen final de tu espacio con texturas, luces y sensaciones, contáctanos y pregunta por
+                        nuestros paquetes de renderización.</p>
                 </div>
             </div>
             <div class="w-full md:w-2/3 relative">
-                <img src="public/images/services/8c603e198125599.Y3JvcCwzMDAwLDIzNDYsMCw1OQ.png" alt="Art Image" class="w-full h-full object-cover">
-                <button class="absolute top-4 right-4 text-white text-2xl" onclick="closeModal('modal5')">&times;</button>
+                <img src="public/images/services/8c603e198125599.Y3JvcCwzMDAwLDIzNDYsMCw1OQ.png" alt="Art Image"
+                    class="w-full h-full object-cover">
+                <button class="absolute top-4 right-4 text-white text-2xl"
+                    onclick="closeModal('modal5')">&times;</button>
             </div>
         </div>
     </div>
@@ -321,12 +291,17 @@
                     <h2 class="text-2xl font-bold mb-4 text-center mt-36">Identidad de marca</h2>
                 </div>
                 <div class="mb-4">
-                    <p class="text-gray-700 mt-20 text-center">Te acompañamos en la búsqueda de la representación visual y conceptual de tu marca o empresa, encontrando la personalidad y los valores de esta. Nuestro servicio incluye creación de logotipo, colorimetría, estilo de marca, estudio de publico objetivo y estudio de entorno y contorno.</p>
+                    <p class="text-gray-700 mt-20 text-center">Te acompañamos en la búsqueda de la representación visual
+                        y conceptual de tu marca o empresa, encontrando la personalidad y los valores de esta. Nuestro
+                        servicio incluye creación de logotipo, colorimetría, estilo de marca, estudio de publico
+                        objetivo y estudio de entorno y contorno.</p>
                 </div>
             </div>
             <div class="w-full md:w-2/3 relative">
-                <img src="public/images/services/83c439186712351.657a157d62e4f.png" alt="Art Image" class="w-full h-full object-cover">
-                <button class="absolute top-4 right-4 text-white text-2xl" onclick="closeModal('modal6')">&times;</button>
+                <img src="public/images/services/83c439186712351.657a157d62e4f.png" alt="Art Image"
+                    class="w-full h-full object-cover">
+                <button class="absolute top-4 right-4 text-white text-2xl"
+                    onclick="closeModal('modal6')">&times;</button>
             </div>
         </div>
     </div>
@@ -340,12 +315,16 @@
                     <h2 class="text-2xl font-bold mb-4 text-center mt-36">Asesoría de diseño</h2>
                 </div>
                 <div class="mb-4">
-                    <p class="text-gray-700 mt-20 text-center">Si deseas dar el primer paso para construir tu proyecto arquitectonico, pero no estás seguro de cómo iniciar, no tienes los medios para concebirlo o simplemente deseas unas primeras ideas, contáctanos y te asesoramos.</p>
+                    <p class="text-gray-700 mt-20 text-center">Si deseas dar el primer paso para construir tu proyecto
+                        arquitectonico, pero no estás seguro de cómo iniciar, no tienes los medios para concebirlo o
+                        simplemente deseas unas primeras ideas, contáctanos y te asesoramos.</p>
                 </div>
             </div>
             <div class="w-full md:w-2/3 relative">
-                <img src="public/images/services/5fb8b2186712351.657a157d5e323.png" alt="Art Image" class="w-full h-full object-cover">
-                <button class="absolute top-4 right-4 text-white text-2xl" onclick="closeModal('modal7')">&times;</button>
+                <img src="public/images/services/5fb8b2186712351.657a157d5e323.png" alt="Art Image"
+                    class="w-full h-full object-cover">
+                <button class="absolute top-4 right-4 text-white text-2xl"
+                    onclick="closeModal('modal7')">&times;</button>
             </div>
         </div>
     </div>
@@ -359,12 +338,16 @@
                     <h2 class="text-2xl font-bold mb-4 text-center mt-36">Trámites para licencia</h2>
                 </div>
                 <div class="mb-4">
-                    <p class="text-gray-700 mt-20 text-center">Si deseas construir un proyecto nuevo o estás en proceso, te asesoramos en la gestión de los trámites que tengas pendientes. Corrección de planos, trámites ante curaduría, asesoramiento en documentos para iniciar tu proyecto y más.</p>
+                    <p class="text-gray-700 mt-20 text-center">Si deseas construir un proyecto nuevo o estás en proceso,
+                        te asesoramos en la gestión de los trámites que tengas pendientes. Corrección de planos,
+                        trámites ante curaduría, asesoramiento en documentos para iniciar tu proyecto y más.</p>
                 </div>
             </div>
             <div class="w-full md:w-2/3 relative">
-                <img src="public/images/services/5dfef8189254889.Y3JvcCwxMDA3LDc4OCwxOTcsMA.png" alt="Art Image" class="w-full h-full object-cover">
-                <button class="absolute top-4 right-4 text-white text-2xl" onclick="closeModal('modal8')">&times;</button>
+                <img src="public/images/services/5dfef8189254889.Y3JvcCwxMDA3LDc4OCwxOTcsMA.png" alt="Art Image"
+                    class="w-full h-full object-cover">
+                <button class="absolute top-4 right-4 text-white text-2xl"
+                    onclick="closeModal('modal8')">&times;</button>
             </div>
         </div>
     </div>
@@ -386,4 +369,5 @@
 
     </script>
 </body>
+
 </html>
