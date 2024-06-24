@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>habbano</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+          .custom-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            gap: 1rem;
+        }
+
+        .large {
+            grid-column: span 2;
+            grid-row: span 1;
+        }
+
+        .small {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .responsive-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Home -->
+    <nav class="bg-black text-white p-10">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center">
+                <img src="./public/images/logo.svg" class="h-12" alt="Logo">
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false" onclick="toggleMenu()">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-black dark:bg-gray-800 md:dark:bg-black dark:border-gray-700">
+                    <li>
+                        <a href="/habbana-web/index.html"
+                            class="block py-2 px-3 text-white rounded md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-white"
+                            aria-current="page">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Proyectos</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contáctanos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Content -->
+    <main class="container mx-auto py-12">
+        <h2 class="text-3xl font-bold mb-8 text-center md:text-left mt-8">
+            <span class="highlight">Proyectos</span>
+            <div class="custom-grid mt-10">
+                <div class="medium bg-white rounded-lg p-4">
+                    <h1 class="mb-10 text-9xl font-thin	">01</h1>
+                    <img src="./public/images/projects/project1.jpg" alt="project#1">
+                    <h1 class="text-xl  mb-8 mt-10 font-normal text-center">cocina (renderizado)</h1>
+                    <p class="text-sm md:text-base text-center font-normal lg:text-lg font-thin">
+                        Es una propuesta de diseño para un concurso de pelikano aplicando diferentes texturas de la misma marca.
+                    </p>
+                </div>
+                <div class="medium bg-white rounded-lg p-4">
+                    <div class="medium bg-white">
+                        <img src="./public/images/projects/project2.jpg" alt="project#1">
+                        <h1 class="text-xl font-normal text-center  mb-8 mt-10">Interiorismo San Sebastián (diseño interior).</h1>
+                        <p class="text-sm md:text-base font-normal text-center lg:text-lg font-thin">
+                            El proyecto es la remodelación de un espacio de 47 m2 para generar un espacio cálido, femenino y bien iluminado. Los colores pasteles son los que priman en el proyecto 
+                        </p>
+                        <h1 class="mb-10 mt-5 text-9xl font-thin	text-right">02</h1>
+                    </div>
+                </div>
+                <div class="small bg-white border border-gray-200 rounded-lg p-4">
+                    <h1 class="mb-12 text-9xl font-thin">03</h1>
+                    <div class="flex flex-wrap justify-center space-x-2">
+                        <img src="./public/images/projects/Project3.png" alt="project#1" class="w-full md:w-72 h-auto object-cover rounded">
+                        <img src="./public/images/projects/Project4.png" alt="project#1" class="w-full md:w-72 h-auto object-cover rounded">
+                    </div>
+                    <h1 class="text-xl  mb-8 mt-10 font-normal text-center">Mobiliario.</h1>
+                    <p class="text-sm md:text-base font-normal lg:text-lg font-thin">
+                        Se diseña el mobiliario para cada uno de los proyectos o clientes que nos contacten. Cada mobiliario es pensado para el espacio y cliente, haciendo un espacio único. Se desarrolla desde el diseño hasta construcción e instalación.
+                    </p>
+                </div>               
+                <div class="large bg-white border border-gray-200 rounded-lg p-4">
+                    <h1 class="mb-12 text-9xl font-thin">04</h1>
+                    <div class="flex flex-wrap justify-center space-x-2">
+                        <img class="mt-5" src="./public/images/projects/Project5.png" class="w-full md:w-48 h-auto object-cover rounded" alt="project#1">
+                        <img class="mt-5" src="./public/images/projects/Project6.png"class="w-full md:w-48 h-auto object-cover rounded" alt="project#1">
+                    </div>
+                    <h1 class="text-xl  mb-8 mt-10 font-normal text-center">plano (diseño arquitectonico).</h1>
+                    <p class="text-sm md:text-base font-normal lg:text-lg p-10 font-thin">
+                        Es del proyecto Casa Caro, una vivienda campestre unifamiliar de dos niveles, que cuenta con 90 metros cuadrados en ambos pisos. Se encuadra la vista hacia un hermoso bosque en la ladera de la montaña en la que se emplaza                    </p>   
+                </div>
+            </div>
+        </h2>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white p-4 md:p-10">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-8">
+            <div class="mb-8 md:mb-0">
+                <p>© Copywriting | All Rights Reserved</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h6 class="font-bold mb-3">Servicios</h6>
+                    <ul class="font-light">
+                        <li>Diseño arquitectonico</li>
+                        <li>Diseño interior</li>
+                        <li>Diseño de mobiliario</li>
+                        <li>Identidad de marca</li>
+                        <li>Branding</li>
+                        <li>Trámites para licencia</li>
+                        <li>Asesoría de diseño</li>
+                        <li>Renderización</li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="font-bold mb-3">Compañía</h6>
+                    <ul class="font-light">
+                        <li>Acerca de nosotros</li>
+                        <li>Clientes</li>
+                        <li>Contáctenos</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex justify-center gap-8 md:justify-end md:col-start-3">
+                <a href="your-instagram-url" aria-label="Instagram">
+                    <img src="./public/social-media/instagram.png" alt="Instagram" />
+                </a>
+                <a href="your-linkedin-url" aria-label="LinkedIn">
+                    <img src="./public/social-media/linkedin-logo.png" alt="LinkedIn" />
+                </a>
+                <a href="your-other-url" aria-label="Other">
+                    <img src="./public/social-media/whatsapp.png" alt="Other" />
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove("hidden");
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add("hidden");
+        }
+
+        function toggleMenu() {
+            const navbarDefault = document.getElementById('navbar-default');
+            navbarDefault.classList.toggle('hidden');
+        }
+
+    </script>
+</body>
+
+</html>
